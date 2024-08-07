@@ -1,0 +1,195 @@
+(footprint "SHOU HAN 10.0 QHHTZB6.3"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "GCT USB1046, USB Type A, https://gct.co/files/drawings/usb1046.pdf")
+	(tags "USB SMD Type-A Receptacle Right Angle")
+	(property "Reference" "REF**"
+		(at 0 -11.43 0)
+		(layer "F.SilkS")
+		(uuid "42f26147-88a9-4ee3-90e3-c0a6f01d324c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "SHOU HAN 10.0 QHHTZB6.3"
+		(at 0 3.81 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6ad19589-b165-4987-b849-9d8a028cf53d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "5b2eacf5-1291-4d9e-bc7a-84ac5ff54faf")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6fc1c9ca-b63b-4530-93a5-3b1f62a415e8")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "01c86b32-d804-40be-8921-a2e7e3794765")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -5 2.75)
+		(end 5 2.75)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Dwgs.User")
+		(uuid "722820bd-dc75-4977-862b-5a3b311d906d")
+	)
+	(fp_line
+		(start -3.75 -6.73)
+		(end -3.5 -6.23)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "05e7b1eb-7285-40af-9b06-695fde5a6c3f")
+	)
+	(fp_line
+		(start -3.5 -6.23)
+		(end -3.25 -6.73)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "be94cbae-03c7-4028-8874-cc2920db2284")
+	)
+	(fp_text user "PCB Edge"
+		(at 0 1.5 0)
+		(layer "Dwgs.User")
+		(uuid "de18e548-9fb8-43a7-8061-2cb0cd945c7a")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.1)
+			)
+		)
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "0d7aacfa-672e-491b-b0f5-cee12386a9ae")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "" smd oval
+		(at -6.45 0)
+		(size 1.2 2.1)
+		(layers "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "db7790fa-94c2-48c6-bbc8-4d23dd4df3a1")
+	)
+	(pad "" smd oval
+		(at 6.45 0)
+		(size 1.2 2.1)
+		(layers "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "94de9c1b-c783-4fac-b6e0-40b64b7a6834")
+	)
+	(pad "1" smd roundrect
+		(at -3.5 -8.5)
+		(size 1.3 3.6)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(roundrect_rratio 0.25)
+		(uuid "cf63f443-b4ca-4e79-afdf-e719f5518cc9")
+	)
+	(pad "2" smd roundrect
+		(at -1 -8.5)
+		(size 1.3 3.6)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(roundrect_rratio 0.25)
+		(uuid "71fa6d56-7c86-4e3f-8ab6-4a03b994e95c")
+	)
+	(pad "3" smd roundrect
+		(at 1 -8.5)
+		(size 1.3 3.6)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(roundrect_rratio 0.25)
+		(uuid "f0edb36a-4e2a-4734-8901-43b4e608f91e")
+	)
+	(pad "4" smd roundrect
+		(at 3.5 -8.5)
+		(size 1.3 3.6)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(roundrect_rratio 0.25)
+		(uuid "2cbb1b45-24d6-484d-862b-1f1e3fe75c46")
+	)
+	(pad "5" thru_hole oval
+		(at -6.45 0)
+		(size 1.2 2.1)
+		(drill oval 0.6 1.5)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(thermal_bridge_angle 45)
+		(uuid "6fefc04c-683b-4715-b1d6-d3acf6a9ada8")
+	)
+	(pad "5" thru_hole oval
+		(at 6.45 0)
+		(size 1.2 2.1)
+		(drill oval 0.6 1.5)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(thermal_bridge_angle 45)
+		(uuid "888f3a08-ecfc-42de-9bab-ef7266b5e3c3")
+	)
+	(model "${KICAD8_3DMODEL_DIR}/Connector_USB.3dshapes/USB_A_Receptacle_GCT_USB1046.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)
