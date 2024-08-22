@@ -23942,6 +23942,19 @@
 		(layer "Edge.Cuts")
 		(uuid "eeff053e-a506-40b0-a89e-3a0b0b74cc6c")
 	)
+	(gr_text "https://github.com/brainsmoke/usb2_hub/ | Open Hardware | CC-BY-4.0"
+		(at 125 58 90)
+		(layer "B.SilkS")
+		(uuid "9e897632-7637-4532-b482-b2b67a47cc81")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.2)
+				(bold yes)
+			)
+			(justify left mirror)
+		)
+	)
 	(gr_text "PORT3"
 		(at 123 101.2 0)
 		(layer "F.SilkS")
