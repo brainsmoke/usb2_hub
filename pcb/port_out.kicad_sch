@@ -2524,6 +2524,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C25803"
+			(at 58.42 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "7606e64a-8de8-4f06-9e67-c8479660c5d6")
 		)
@@ -2569,7 +2578,7 @@
 				)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "12k"
 			(at 193.04 36.83 90)
 			(effects
 				(font
@@ -2596,6 +2605,15 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 189.23 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C22790"
 			(at 189.23 36.83 0)
 			(effects
 				(font
@@ -2764,6 +2782,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C14663"
+			(at 99.06 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "f9e21321-7f56-4fd4-8a05-0fb1df19ab78")
 		)
@@ -2809,7 +2836,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "12k"
 			(at 102.616 39.37 0)
 			(effects
 				(font
@@ -2837,6 +2864,15 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 100.33 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C22790"
 			(at 100.33 38.1 0)
 			(effects
 				(font
@@ -3084,6 +3120,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C2297"
+			(at 181.61 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "3fde7b7e-7445-4cad-bc73-a48acedc2893")
 		)
@@ -3168,6 +3213,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C7519"
+			(at 152.4 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "f50ed376-a46c-4451-a529-0e3145f1338b")
 		)
@@ -3235,7 +3289,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1210_3225Metric"
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
 			(at 88.5952 90.17 0)
 			(effects
 				(font
@@ -3254,6 +3308,15 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 87.63 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C12891"
 			(at 87.63 86.36 0)
 			(effects
 				(font
@@ -3422,6 +3485,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C15850"
+			(at 59.69 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "1b387323-6aeb-4ad6-84c5-4118da4e1fd6")
 		)
@@ -3496,6 +3568,15 @@
 			)
 		)
 		(property "Description" "USB Type A connector"
+			(at 144.78 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C668591"
 			(at 144.78 40.64 0)
 			(effects
 				(font
@@ -3673,6 +3754,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C14663"
+			(at 72.39 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "f6eed24c-c9b1-4870-8306-d800ca082683")
 		)
@@ -3747,6 +3837,15 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 173.99 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C965889"
 			(at 173.99 52.07 0)
 			(effects
 				(font
@@ -3956,7 +4055,7 @@
 				)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "12k"
 			(at 181.61 36.83 90)
 			(effects
 				(font
@@ -3983,6 +4082,15 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 177.8 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C22790"
 			(at 177.8 36.83 0)
 			(effects
 				(font
@@ -4065,6 +4173,15 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 189.23 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C965819"
 			(at 189.23 52.07 0)
 			(effects
 				(font
@@ -4196,7 +4313,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "12k"
 			(at 88.9 52.07 0)
 			(effects
 				(font
@@ -4224,6 +4341,15 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 95.25 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C22790"
 			(at 95.25 50.8 0)
 			(effects
 				(font
@@ -4305,6 +4431,15 @@
 		)
 		(property "Description" ""
 			(at 81.28 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C5329413"
+			(at 81.28 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)

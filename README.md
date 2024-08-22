@@ -7,3 +7,5 @@
 
 # v0.4 untested
 
+<img src="img/v0.4.png">
+
