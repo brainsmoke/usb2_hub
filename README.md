@@ -5,7 +5,7 @@
 
 <img src="img/hub.jpg">
 
-# v0.5 untested
+# v0.6 untested
 
-<img src="img/v0.5.png">
+<img src="img/v0.6.png">
 
