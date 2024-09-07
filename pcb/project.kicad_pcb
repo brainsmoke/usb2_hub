@@ -5253,14 +5253,13 @@
 	(footprint "Library:SHOU HAN 10.0 QHHTZB6.3"
 		(layer "F.Cu")
 		(uuid "40f9daa6-06ca-4618-9d7b-2ae0193d15fe")
-		(at 166 65 90)
+		(at 161.65 65 90)
 		(descr "GCT USB1046, USB Type A, https://gct.co/files/drawings/usb1046.pdf")
 		(tags "USB SMD Type-A Receptacle Right Angle")
 		(property "Reference" "J1"
-			(at 0 -11.43 90)
+			(at 0 -7.08 90)
 			(layer "F.SilkS")
-			(hide yes)
-			(uuid "053dee48-b8d8-4b35-a28d-1520139b4a29")
+			(uuid "b16ca29b-952b-4ef5-ba04-c04e5eac2765")
 			(effects
 				(font
 					(size 1 1)
@@ -5269,10 +5268,10 @@
 			)
 		)
 		(property "Value" "USB_A"
-			(at 0 3.81 90)
+			(at 0 8.16 90)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "2b37ca39-b586-4220-a954-0813c37aeaf1")
+			(uuid "fa91dd07-9db2-4883-adc9-d38831b2ad09")
 			(effects
 				(font
 					(size 1 1)
@@ -5281,11 +5280,11 @@
 			)
 		)
 		(property "Footprint" "Library:SHOU HAN 10.0 QHHTZB6.3"
-			(at 0 0 90)
+			(at 0 4.35 90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "051f223b-c51a-4be6-8f29-44d5096cf91f")
+			(uuid "cd1ba031-10b5-4ae3-940d-33e5623d1758")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5294,11 +5293,11 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 90)
+			(at 0 4.35 90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "43fc6877-f37a-4d07-b042-d1d9b439fa58")
+			(uuid "7ebcfff7-3b61-416f-b7b5-91282603e74b")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5307,11 +5306,11 @@
 			)
 		)
 		(property "Description" "USB Type A connector"
-			(at 0 0 90)
+			(at 0 4.35 90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "d336c6cc-d625-4325-a76f-7df9202a396a")
+			(uuid "c9235bbc-976a-4f0e-8cd1-262106c4d766")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5338,39 +5337,39 @@
 		(sheetfile "port_out.kicad_sch")
 		(attr smd)
 		(fp_line
-			(start -5 2.75)
-			(end 5 2.75)
+			(start -5 7.1)
+			(end 5 7.1)
 			(stroke
 				(width 0.05)
 				(type default)
 			)
 			(layer "Dwgs.User")
-			(uuid "ac4c064f-4d35-4f3f-ba27-4ec58349fcbb")
+			(uuid "790643e5-f9ae-4bc6-9c9b-d0572f91c32a")
 		)
 		(fp_line
-			(start -3.75 -6.73)
-			(end -3.5 -6.23)
+			(start -3.75 -2.38)
+			(end -3.5 -1.88)
 			(stroke
 				(width 0.1)
 				(type default)
 			)
 			(layer "F.Fab")
-			(uuid "0aa7903c-abe1-414a-b7d9-ab7fd5508bce")
+			(uuid "9ee7ff40-7e52-4c6f-b26c-cead66ada53a")
 		)
 		(fp_line
-			(start -3.5 -6.23)
-			(end -3.25 -6.73)
+			(start -3.5 -1.88)
+			(end -3.25 -2.38)
 			(stroke
 				(width 0.1)
 				(type default)
 			)
 			(layer "F.Fab")
-			(uuid "e62d100a-688f-48cb-a9a6-dfc7db0a3ec5")
+			(uuid "5d286dc4-466a-4177-a10a-95d35c086934")
 		)
 		(fp_text user "PCB Edge"
-			(at 0 1.5 90)
+			(at 0 5.85 90)
 			(layer "Dwgs.User")
-			(uuid "0afa6798-7f39-489f-a56c-ef978e71ca0b")
+			(uuid "6d315cb3-04f5-426a-a5b3-a766b6c39d9a")
 			(effects
 				(font
 					(size 0.5 0.5)
@@ -5379,10 +5378,10 @@
 			)
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 90)
+			(at 0 4.35 90)
 			(unlocked yes)
 			(layer "F.Fab")
-			(uuid "a47785c7-67d9-4cbd-98df-f07dd5ee47e8")
+			(uuid "65901883-696a-4676-adbb-007558d9ce4d")
 			(effects
 				(font
 					(size 1 1)
@@ -5391,61 +5390,61 @@
 			)
 		)
 		(pad "" smd oval
-			(at -6.45 0 90)
+			(at -6.45 4.35 90)
 			(size 1.2 2.1)
 			(layers "F.Paste")
 			(thermal_bridge_angle 45)
-			(uuid "3b0a6dd2-c595-4af7-a345-a79e5bb219a3")
+			(uuid "4f5cb620-af79-46b3-90f5-24ba02d0b4cf")
 		)
 		(pad "" smd oval
-			(at 6.45 0 90)
+			(at 6.45 4.35 90)
 			(size 1.2 2.1)
 			(layers "F.Paste")
 			(thermal_bridge_angle 45)
-			(uuid "ce580e49-795a-4a5a-aa13-bade0c32728a")
+			(uuid "753c774e-a8f1-498c-b125-dcf31491cec3")
 		)
 		(pad "1" smd roundrect
-			(at -3.5 -8.5 90)
+			(at -3.5 -4.15 90)
 			(size 1.3 3.6)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(roundrect_rratio 0.25)
 			(net 7 "VUSB1")
 			(pinfunction "VBUS")
 			(pintype "power_in")
-			(uuid "17340e91-69c7-432a-91dc-526785f7f5c6")
+			(uuid "c2486711-3383-4852-8531-72208b9989c0")
 		)
 		(pad "2" smd roundrect
-			(at -1 -8.5 90)
+			(at -1 -4.15 90)
 			(size 1.3 3.6)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(roundrect_rratio 0.25)
 			(net 51 "Net-(J1-D-)")
 			(pinfunction "D-")
 			(pintype "bidirectional")
-			(uuid "5eb79bf9-85c4-4438-a8d6-ebd4ecaa177a")
+			(uuid "d2d6c03e-a2e4-44bf-8e9f-eca47051b332")
 		)
 		(pad "3" smd roundrect
-			(at 1 -8.5 90)
+			(at 1 -4.15 90)
 			(size 1.3 3.6)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(roundrect_rratio 0.25)
 			(net 52 "Net-(J1-D+)")
 			(pinfunction "D+")
 			(pintype "bidirectional")
-			(uuid "34df0c06-8343-4bdc-8e71-8e275549db10")
+			(uuid "1f927172-f085-4cc3-9710-a4ab132315c5")
 		)
 		(pad "4" smd roundrect
-			(at 3.5 -8.5 90)
+			(at 3.5 -4.15 90)
 			(size 1.3 3.6)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(roundrect_rratio 0.25)
 			(net 2 "GND")
 			(pinfunction "GND")
 			(pintype "power_in")
-			(uuid "28fafd86-ef88-46a6-ad1e-6912cf8d231e")
+			(uuid "7ca271c7-49e8-42c4-aaa8-3dac4cd85014")
 		)
 		(pad "5" thru_hole oval
-			(at -6.45 0 90)
+			(at -6.45 4.35 90)
 			(size 1.2 2.1)
 			(drill oval 0.6 1.5)
 			(layers "*.Cu" "*.Mask")
@@ -5454,10 +5453,10 @@
 			(pinfunction "Shield")
 			(pintype "passive")
 			(thermal_bridge_angle 45)
-			(uuid "00cb1f1d-0f0b-408d-9082-3d69b16bf801")
+			(uuid "0cd81347-008c-4cf1-9eba-4f68f5f28edb")
 		)
 		(pad "5" thru_hole oval
-			(at 6.45 0 90)
+			(at 6.45 4.35 90)
 			(size 1.2 2.1)
 			(drill oval 0.6 1.5)
 			(layers "*.Cu" "*.Mask")
@@ -5466,7 +5465,7 @@
 			(pinfunction "Shield")
 			(pintype "passive")
 			(thermal_bridge_angle 45)
-			(uuid "d238c053-91af-4ad0-9524-8c3495325528")
+			(uuid "5f3eb526-104e-43a8-97f7-f6ee66c7c585")
 		)
 		(model "${KICAD8_3DMODEL_DIR}/Connector_USB.3dshapes/USB_A_Receptacle_GCT_USB1046.wrl"
 			(offset
@@ -14191,14 +14190,13 @@
 	(footprint "Library:SHOU HAN 10.0 QHHTZB6.3"
 		(layer "F.Cu")
 		(uuid "a62a2223-7665-4f3d-acbc-474e2036004e")
-		(at 166 85 90)
+		(at 161.65 85 90)
 		(descr "GCT USB1046, USB Type A, https://gct.co/files/drawings/usb1046.pdf")
 		(tags "USB SMD Type-A Receptacle Right Angle")
 		(property "Reference" "J2"
-			(at 0 -11.43 90)
+			(at 0 -7.08 90)
 			(layer "F.SilkS")
-			(hide yes)
-			(uuid "a27e206d-de53-42a5-9516-2bdf2ecf98c2")
+			(uuid "c52960f5-aaa1-4580-910e-bf41105c64af")
 			(effects
 				(font
 					(size 1 1)
@@ -14207,10 +14205,10 @@
 			)
 		)
 		(property "Value" "USB_A"
-			(at 0 3.81 90)
+			(at 0 8.16 90)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "1997fdf4-03a4-44e4-95dc-eee99ccbdb03")
+			(uuid "fc048510-77c5-4c81-917e-80388f57af00")
 			(effects
 				(font
 					(size 1 1)
@@ -14219,11 +14217,11 @@
 			)
 		)
 		(property "Footprint" "Library:SHOU HAN 10.0 QHHTZB6.3"
-			(at 0 0 90)
+			(at 0 4.35 90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "4ef93ec1-4d99-4b66-b427-838efe56728f")
+			(uuid "e064db11-773d-411c-b673-4a2d6abaf058")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14232,11 +14230,11 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 90)
+			(at 0 4.35 90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "663c4fb0-28a4-4d82-b4e9-7f59736b36d5")
+			(uuid "d4bdc130-e785-4b52-a9a5-eb8e82dd54e0")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14245,11 +14243,11 @@
 			)
 		)
 		(property "Description" "USB Type A connector"
-			(at 0 0 90)
+			(at 0 4.35 90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "60b77d8b-3899-4a47-a282-b36a111acfa4")
+			(uuid "60b8400f-5d8d-45a9-a60a-8f390b09fd0e")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14276,39 +14274,39 @@
 		(sheetfile "port_out.kicad_sch")
 		(attr smd)
 		(fp_line
-			(start -5 2.75)
-			(end 5 2.75)
+			(start -5 7.1)
+			(end 5 7.1)
 			(stroke
 				(width 0.05)
 				(type default)
 			)
 			(layer "Dwgs.User")
-			(uuid "b25ac2ae-b1e7-4906-90d0-4f2b7122ddb0")
+			(uuid "9577b08d-3059-4572-a5ec-fe517c99118e")
 		)
 		(fp_line
-			(start -3.75 -6.73)
-			(end -3.5 -6.23)
+			(start -3.75 -2.38)
+			(end -3.5 -1.88)
 			(stroke
 				(width 0.1)
 				(type default)
 			)
 			(layer "F.Fab")
-			(uuid "b9f855ae-dc26-44e5-ac39-cad465b0f6fe")
+			(uuid "49957533-6d08-468c-b528-edca692a3740")
 		)
 		(fp_line
-			(start -3.5 -6.23)
-			(end -3.25 -6.73)
+			(start -3.5 -1.88)
+			(end -3.25 -2.38)
 			(stroke
 				(width 0.1)
 				(type default)
 			)
 			(layer "F.Fab")
-			(uuid "c60c68af-2af4-47f0-a604-0371cb483590")
+			(uuid "63be00c7-e4cf-49d6-8cfc-78e7f7eaac04")
 		)
 		(fp_text user "PCB Edge"
-			(at 0 1.5 90)
+			(at 0 5.85 90)
 			(layer "Dwgs.User")
-			(uuid "988c97f6-37f7-4a2e-af6c-6118916f2544")
+			(uuid "a819b217-9bca-4e7c-8eb2-9ad4c4dd9c91")
 			(effects
 				(font
 					(size 0.5 0.5)
@@ -14317,10 +14315,10 @@
 			)
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 90)
+			(at 0 4.35 90)
 			(unlocked yes)
 			(layer "F.Fab")
-			(uuid "17556283-6abe-4b4b-8180-9851e1646717")
+			(uuid "285a0521-886e-4ac7-9ee4-3729458076bc")
 			(effects
 				(font
 					(size 1 1)
@@ -14329,61 +14327,61 @@
 			)
 		)
 		(pad "" smd oval
-			(at -6.45 0 90)
+			(at -6.45 4.35 90)
 			(size 1.2 2.1)
 			(layers "F.Paste")
 			(thermal_bridge_angle 45)
-			(uuid "6d5323ea-09c1-40a6-9836-5a44e81f2f3f")
+			(uuid "99c2fd7c-d4bb-422d-b9f6-ff46e7b282f3")
 		)
 		(pad "" smd oval
-			(at 6.45 0 90)
+			(at 6.45 4.35 90)
 			(size 1.2 2.1)
 			(layers "F.Paste")
 			(thermal_bridge_angle 45)
-			(uuid "48170c1a-70ad-43b3-887b-051a562a9a30")
+			(uuid "d3d3ff65-449a-4cd7-8f4a-6cfc1eb991dc")
 		)
 		(pad "1" smd roundrect
-			(at -3.5 -8.5 90)
+			(at -3.5 -4.15 90)
 			(size 1.3 3.6)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(roundrect_rratio 0.25)
 			(net 8 "VUSB2")
 			(pinfunction "VBUS")
 			(pintype "power_in")
-			(uuid "1b16dda3-0e22-4a6f-8cc2-2c68a207e41f")
+			(uuid "9ce887bf-f6b0-4a78-93ea-1447b43c642f")
 		)
 		(pad "2" smd roundrect
-			(at -1 -8.5 90)
+			(at -1 -4.15 90)
 			(size 1.3 3.6)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(roundrect_rratio 0.25)
 			(net 53 "Net-(J2-D-)")
 			(pinfunction "D-")
 			(pintype "bidirectional")
-			(uuid "7b169ae3-6cd5-41b9-bfcb-72ea617b8e68")
+			(uuid "4c7bb7a9-94fa-4f78-869e-26fc64429f74")
 		)
 		(pad "3" smd roundrect
-			(at 1 -8.5 90)
+			(at 1 -4.15 90)
 			(size 1.3 3.6)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(roundrect_rratio 0.25)
 			(net 54 "Net-(J2-D+)")
 			(pinfunction "D+")
 			(pintype "bidirectional")
-			(uuid "2cd0adc0-4870-4008-a8b2-aca96ac7ef1f")
+			(uuid "bf72edf4-7879-461e-9d80-d030508dbd60")
 		)
 		(pad "4" smd roundrect
-			(at 3.5 -8.5 90)
+			(at 3.5 -4.15 90)
 			(size 1.3 3.6)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(roundrect_rratio 0.25)
 			(net 2 "GND")
 			(pinfunction "GND")
 			(pintype "power_in")
-			(uuid "b2d91529-90fa-40c2-afa0-39d3f041b979")
+			(uuid "b2aeef08-036d-4763-894b-6474dd0e90b9")
 		)
 		(pad "5" thru_hole oval
-			(at -6.45 0 90)
+			(at -6.45 4.35 90)
 			(size 1.2 2.1)
 			(drill oval 0.6 1.5)
 			(layers "*.Cu" "*.Mask")
@@ -14392,10 +14390,10 @@
 			(pinfunction "Shield")
 			(pintype "passive")
 			(thermal_bridge_angle 45)
-			(uuid "c6384155-702d-481e-ace2-4735faf47fca")
+			(uuid "e0c00fa0-1091-425f-b30c-6788be7ad728")
 		)
 		(pad "5" thru_hole oval
-			(at 6.45 0 90)
+			(at 6.45 4.35 90)
 			(size 1.2 2.1)
 			(drill oval 0.6 1.5)
 			(layers "*.Cu" "*.Mask")
@@ -14404,7 +14402,7 @@
 			(pinfunction "Shield")
 			(pintype "passive")
 			(thermal_bridge_angle 45)
-			(uuid "d65458d1-b16f-4e72-950e-ee9bd63caf5d")
+			(uuid "f8a0791f-306d-41d3-93ac-36a0b988fadb")
 		)
 		(model "${KICAD8_3DMODEL_DIR}/Connector_USB.3dshapes/USB_A_Receptacle_GCT_USB1046.wrl"
 			(offset
@@ -14875,14 +14873,13 @@
 	(footprint "Library:SHOU HAN 10.0 QHHTZB6.3"
 		(layer "F.Cu")
 		(uuid "adda7c29-3cd7-4a5a-815f-ea9f36e7ad0d")
-		(at 166 105 90)
+		(at 161.65 105 90)
 		(descr "GCT USB1046, USB Type A, https://gct.co/files/drawings/usb1046.pdf")
 		(tags "USB SMD Type-A Receptacle Right Angle")
 		(property "Reference" "J3"
-			(at 0 -11.43 90)
+			(at 0 -7.08 90)
 			(layer "F.SilkS")
-			(hide yes)
-			(uuid "a7a0d04f-4a64-489e-8dca-d327432d7c19")
+			(uuid "6322775f-2fde-4153-a653-5cf82679a251")
 			(effects
 				(font
 					(size 1 1)
@@ -14891,10 +14888,10 @@
 			)
 		)
 		(property "Value" "USB_A"
-			(at 0 3.81 90)
+			(at 0 8.16 90)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "8d0861cc-7c29-4c26-a367-d6947d29dfce")
+			(uuid "09ab9a50-29e7-48ec-ac91-df02e32b1b13")
 			(effects
 				(font
 					(size 1 1)
@@ -14903,11 +14900,11 @@
 			)
 		)
 		(property "Footprint" "Library:SHOU HAN 10.0 QHHTZB6.3"
-			(at 0 0 90)
+			(at 0 4.35 90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "8db21cba-882f-4969-9f07-dc145cb98f9e")
+			(uuid "e04e92d6-3d1b-4cc2-b3b6-98f4f0fa0e79")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14916,11 +14913,11 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 90)
+			(at 0 4.35 90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "e2935c55-6a61-475f-ba57-cb80320e9fa5")
+			(uuid "64a1f50c-e117-4e3c-95b9-6ec479072730")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14929,11 +14926,11 @@
 			)
 		)
 		(property "Description" "USB Type A connector"
-			(at 0 0 90)
+			(at 0 4.35 90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "c54b5c3d-2752-4ef7-abbc-bb211bacb4ef")
+			(uuid "ced19cc6-1f03-4463-8a2f-e96cbea7dd1d")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14960,39 +14957,39 @@
 		(sheetfile "port_out.kicad_sch")
 		(attr smd)
 		(fp_line
-			(start -5 2.75)
-			(end 5 2.75)
+			(start -5 7.1)
+			(end 5 7.1)
 			(stroke
 				(width 0.05)
 				(type default)
 			)
 			(layer "Dwgs.User")
-			(uuid "6fa4f965-c620-486b-a307-22e82c0c768c")
+			(uuid "acee10c6-c553-43da-ac6b-822d169f0dc6")
 		)
 		(fp_line
-			(start -3.75 -6.73)
-			(end -3.5 -6.23)
+			(start -3.75 -2.38)
+			(end -3.5 -1.88)
 			(stroke
 				(width 0.1)
 				(type default)
 			)
 			(layer "F.Fab")
-			(uuid "b9ec52cc-100d-44c8-8097-44b17501cea5")
+			(uuid "ae5b22f7-0a16-4f2a-8885-098c4b535bbf")
 		)
 		(fp_line
-			(start -3.5 -6.23)
-			(end -3.25 -6.73)
+			(start -3.5 -1.88)
+			(end -3.25 -2.38)
 			(stroke
 				(width 0.1)
 				(type default)
 			)
 			(layer "F.Fab")
-			(uuid "65ef182d-c62c-4c4f-a411-263bd2959bff")
+			(uuid "f0649357-7ee9-4552-8d11-9e6ca7fb3c64")
 		)
 		(fp_text user "PCB Edge"
-			(at 0 1.5 90)
+			(at 0 5.85 90)
 			(layer "Dwgs.User")
-			(uuid "edfa474a-83a5-4914-a84a-517f2eeb9c86")
+			(uuid "86131765-b7fd-4e3d-9407-c59cb1c9abb5")
 			(effects
 				(font
 					(size 0.5 0.5)
@@ -15001,10 +14998,10 @@
 			)
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 90)
+			(at 0 4.35 90)
 			(unlocked yes)
 			(layer "F.Fab")
-			(uuid "e7234c10-7427-4f49-9bb1-5ee8dd02e7f8")
+			(uuid "728d87fd-b07c-4d86-9b5c-0b913705e5fa")
 			(effects
 				(font
 					(size 1 1)
@@ -15013,61 +15010,61 @@
 			)
 		)
 		(pad "" smd oval
-			(at -6.45 0 90)
+			(at -6.45 4.35 90)
 			(size 1.2 2.1)
 			(layers "F.Paste")
 			(thermal_bridge_angle 45)
-			(uuid "495d6328-f3de-4736-b851-207227a63a79")
+			(uuid "0f436244-2434-4f3c-923f-cb2287ac337e")
 		)
 		(pad "" smd oval
-			(at 6.45 0 90)
+			(at 6.45 4.35 90)
 			(size 1.2 2.1)
 			(layers "F.Paste")
 			(thermal_bridge_angle 45)
-			(uuid "2443621d-21b5-44c8-83dc-ca8110e5cc49")
+			(uuid "678308e1-a6ca-417c-9879-51b859768d6e")
 		)
 		(pad "1" smd roundrect
-			(at -3.5 -8.5 90)
+			(at -3.5 -4.15 90)
 			(size 1.3 3.6)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(roundrect_rratio 0.25)
 			(net 9 "VUSB3")
 			(pinfunction "VBUS")
 			(pintype "power_in")
-			(uuid "3cc2ac7b-b544-45cb-9dbb-4411e266af96")
+			(uuid "4cff8096-76a0-4d2e-b4bf-8d1ab3c0ac90")
 		)
 		(pad "2" smd roundrect
-			(at -1 -8.5 90)
+			(at -1 -4.15 90)
 			(size 1.3 3.6)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(roundrect_rratio 0.25)
 			(net 55 "Net-(J3-D-)")
 			(pinfunction "D-")
 			(pintype "bidirectional")
-			(uuid "c48bd9d3-11ed-4f6e-836a-4c86722ec8e1")
+			(uuid "7f0f19c3-c976-426c-83fe-ae26379660c2")
 		)
 		(pad "3" smd roundrect
-			(at 1 -8.5 90)
+			(at 1 -4.15 90)
 			(size 1.3 3.6)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(roundrect_rratio 0.25)
 			(net 56 "Net-(J3-D+)")
 			(pinfunction "D+")
 			(pintype "bidirectional")
-			(uuid "c2cf234e-69b5-4af7-8caf-10dc015021f2")
+			(uuid "9444c8c4-9076-458d-849c-e8f43ab5a3e3")
 		)
 		(pad "4" smd roundrect
-			(at 3.5 -8.5 90)
+			(at 3.5 -4.15 90)
 			(size 1.3 3.6)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(roundrect_rratio 0.25)
 			(net 2 "GND")
 			(pinfunction "GND")
 			(pintype "power_in")
-			(uuid "0ccae9f2-3e90-4af1-8d8b-ec1ae1927bf5")
+			(uuid "0fc7ca20-0e06-4c80-9538-eca58410df39")
 		)
 		(pad "5" thru_hole oval
-			(at -6.45 0 90)
+			(at -6.45 4.35 90)
 			(size 1.2 2.1)
 			(drill oval 0.6 1.5)
 			(layers "*.Cu" "*.Mask")
@@ -15076,10 +15073,10 @@
 			(pinfunction "Shield")
 			(pintype "passive")
 			(thermal_bridge_angle 45)
-			(uuid "b00dfaca-26d1-4e09-8ac3-575c7422e64c")
+			(uuid "91ceae95-bdec-45bb-888b-06ec199e59f4")
 		)
 		(pad "5" thru_hole oval
-			(at 6.45 0 90)
+			(at 6.45 4.35 90)
 			(size 1.2 2.1)
 			(drill oval 0.6 1.5)
 			(layers "*.Cu" "*.Mask")
@@ -15088,7 +15085,7 @@
 			(pinfunction "Shield")
 			(pintype "passive")
 			(thermal_bridge_angle 45)
-			(uuid "f6fc68ee-db25-45c6-b454-64901a315adb")
+			(uuid "dfe2efe4-a0c9-4e41-8ef0-052fc382cf3c")
 		)
 		(model "${KICAD8_3DMODEL_DIR}/Connector_USB.3dshapes/USB_A_Receptacle_GCT_USB1046.wrl"
 			(offset
@@ -20336,14 +20333,13 @@
 	(footprint "Library:SHOU HAN 10.0 QHHTZB6.3"
 		(layer "F.Cu")
 		(uuid "e747bded-3c4e-4e6b-8fae-ab83fd6a7ce8")
-		(at 166 125 90)
+		(at 161.65 125 90)
 		(descr "GCT USB1046, USB Type A, https://gct.co/files/drawings/usb1046.pdf")
 		(tags "USB SMD Type-A Receptacle Right Angle")
 		(property "Reference" "J4"
-			(at 0 -11.43 90)
+			(at 0 -7.08 90)
 			(layer "F.SilkS")
-			(hide yes)
-			(uuid "d3e1120c-a3fa-4641-af4d-6785f533849e")
+			(uuid "700d4a1d-d2e9-4d76-826c-3670b06dd1b4")
 			(effects
 				(font
 					(size 1 1)
@@ -20352,10 +20348,10 @@
 			)
 		)
 		(property "Value" "USB_A"
-			(at 0 3.81 90)
+			(at 0 8.16 90)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "93a1a265-9156-4d67-bc11-6dab848360df")
+			(uuid "ee245bf3-5c7f-45a9-b435-9797bf4b4234")
 			(effects
 				(font
 					(size 1 1)
@@ -20364,11 +20360,11 @@
 			)
 		)
 		(property "Footprint" "Library:SHOU HAN 10.0 QHHTZB6.3"
-			(at 0 0 90)
+			(at 0 4.35 90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "7977abd0-86b7-4fcd-9b99-1349d3db04e4")
+			(uuid "1cea635a-c35a-4405-a642-3021d0a413fb")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20377,11 +20373,11 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 90)
+			(at 0 4.35 90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "ecb08f93-4dd0-4196-bc85-1d83458ac9f1")
+			(uuid "20544a05-5656-4646-bf36-d3e0e744c5ba")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20390,11 +20386,11 @@
 			)
 		)
 		(property "Description" "USB Type A connector"
-			(at 0 0 90)
+			(at 0 4.35 90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "be1d6016-b941-4dc1-8e9b-5ba372a4dc3c")
+			(uuid "25d0036b-82a4-420d-9754-0cf2e89f2435")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20421,39 +20417,39 @@
 		(sheetfile "port_out.kicad_sch")
 		(attr smd)
 		(fp_line
-			(start -5 2.75)
-			(end 5 2.75)
+			(start -5 7.1)
+			(end 5 7.1)
 			(stroke
 				(width 0.05)
 				(type default)
 			)
 			(layer "Dwgs.User")
-			(uuid "2e5409ca-abf3-47c8-88e2-0a00eb29c715")
+			(uuid "e940dea5-9211-47a4-9eb0-fa6c1c9c7977")
 		)
 		(fp_line
-			(start -3.75 -6.73)
-			(end -3.5 -6.23)
+			(start -3.75 -2.38)
+			(end -3.5 -1.88)
 			(stroke
 				(width 0.1)
 				(type default)
 			)
 			(layer "F.Fab")
-			(uuid "c438e224-67b6-490f-9b87-19dd4c8ee2b0")
+			(uuid "6a77b713-3d67-4ccc-b5e6-9a00d86f3a26")
 		)
 		(fp_line
-			(start -3.5 -6.23)
-			(end -3.25 -6.73)
+			(start -3.5 -1.88)
+			(end -3.25 -2.38)
 			(stroke
 				(width 0.1)
 				(type default)
 			)
 			(layer "F.Fab")
-			(uuid "f5aba40d-81aa-448d-a6fc-01fe319658e2")
+			(uuid "4633dfa9-02a5-4301-b5a4-21638c7f6027")
 		)
 		(fp_text user "PCB Edge"
-			(at 0 1.5 90)
+			(at 0 5.85 90)
 			(layer "Dwgs.User")
-			(uuid "887cb8ee-de96-4ddd-a69b-0b481004a227")
+			(uuid "8705816b-cbd9-44ea-ae85-5b6742c2548e")
 			(effects
 				(font
 					(size 0.5 0.5)
@@ -20462,10 +20458,10 @@
 			)
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 90)
+			(at 0 4.35 90)
 			(unlocked yes)
 			(layer "F.Fab")
-			(uuid "36247c20-8af6-4fc5-8ed5-276e612703c4")
+			(uuid "5aa2463d-45ce-46d7-827c-90f0e932b76d")
 			(effects
 				(font
 					(size 1 1)
@@ -20474,61 +20470,61 @@
 			)
 		)
 		(pad "" smd oval
-			(at -6.45 0 90)
+			(at -6.45 4.35 90)
 			(size 1.2 2.1)
 			(layers "F.Paste")
 			(thermal_bridge_angle 45)
-			(uuid "197938aa-44bc-480b-b4fc-bf0f22f463dc")
+			(uuid "35651793-f36f-46ec-9ff9-3059746f46e2")
 		)
 		(pad "" smd oval
-			(at 6.45 0 90)
+			(at 6.45 4.35 90)
 			(size 1.2 2.1)
 			(layers "F.Paste")
 			(thermal_bridge_angle 45)
-			(uuid "548059a9-e9b9-42c6-b286-4a75f8f4fbf6")
+			(uuid "e50b41db-b419-4496-9b2e-b099ed606de9")
 		)
 		(pad "1" smd roundrect
-			(at -3.5 -8.5 90)
+			(at -3.5 -4.15 90)
 			(size 1.3 3.6)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(roundrect_rratio 0.25)
 			(net 10 "VUSB4")
 			(pinfunction "VBUS")
 			(pintype "power_in")
-			(uuid "ffed1c25-b3e2-4ac5-8f11-0a2bf3d11276")
+			(uuid "9c5080f5-7cf4-43f3-95ca-6b86b716034b")
 		)
 		(pad "2" smd roundrect
-			(at -1 -8.5 90)
+			(at -1 -4.15 90)
 			(size 1.3 3.6)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(roundrect_rratio 0.25)
 			(net 58 "Net-(J4-D-)")
 			(pinfunction "D-")
 			(pintype "bidirectional")
-			(uuid "6fedb6a4-b813-4a42-9ce4-5e94b04c5779")
+			(uuid "260ea6f9-8eed-4615-9cfc-4c6b16c5a79e")
 		)
 		(pad "3" smd roundrect
-			(at 1 -8.5 90)
+			(at 1 -4.15 90)
 			(size 1.3 3.6)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(roundrect_rratio 0.25)
 			(net 57 "Net-(J4-D+)")
 			(pinfunction "D+")
 			(pintype "bidirectional")
-			(uuid "9cbd47de-b64d-45af-b333-2be8d86c64c9")
+			(uuid "6f6e1d6f-837e-483a-b00e-7d6a6babf554")
 		)
 		(pad "4" smd roundrect
-			(at 3.5 -8.5 90)
+			(at 3.5 -4.15 90)
 			(size 1.3 3.6)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(roundrect_rratio 0.25)
 			(net 2 "GND")
 			(pinfunction "GND")
 			(pintype "power_in")
-			(uuid "6a633560-5318-4d6f-9dfe-42f6749c11e4")
+			(uuid "e5cb853b-fa2e-4ef8-ba2d-5eb95ebc601b")
 		)
 		(pad "5" thru_hole oval
-			(at -6.45 0 90)
+			(at -6.45 4.35 90)
 			(size 1.2 2.1)
 			(drill oval 0.6 1.5)
 			(layers "*.Cu" "*.Mask")
@@ -20537,10 +20533,10 @@
 			(pinfunction "Shield")
 			(pintype "passive")
 			(thermal_bridge_angle 45)
-			(uuid "ad0187b3-ec33-4eca-bb18-ab18d89249bb")
+			(uuid "d72bd917-9a2f-4285-921c-16e5f731310f")
 		)
 		(pad "5" thru_hole oval
-			(at 6.45 0 90)
+			(at 6.45 4.35 90)
 			(size 1.2 2.1)
 			(drill oval 0.6 1.5)
 			(layers "*.Cu" "*.Mask")
@@ -20549,7 +20545,7 @@
 			(pinfunction "Shield")
 			(pintype "passive")
 			(thermal_bridge_angle 45)
-			(uuid "4735baf6-1208-4cda-ad1d-f7ec099aa91f")
+			(uuid "a97eb6a8-47fc-4b73-a29a-b4b4d8e6b84b")
 		)
 		(model "${KICAD8_3DMODEL_DIR}/Connector_USB.3dshapes/USB_A_Receptacle_GCT_USB1046.wrl"
 			(offset
