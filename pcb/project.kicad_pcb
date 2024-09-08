@@ -1822,7 +1822,7 @@
 	(footprint "Package_TO_SOT_SMD:SOT-23-6"
 		(layer "F.Cu")
 		(uuid "23180215-ce87-4e47-840f-597df9f40228")
-		(at 151.8625 124.999999 180)
+		(at 151.8625 125 180)
 		(descr "SOT, 6 Pin (https://www.jedec.org/sites/default/files/docs/Mo-178c.PDF variant AB), generated with kicad-footprint-generator ipc_gullwing_generator.py")
 		(tags "SOT TO_SOT_SMD")
 		(property "Reference" "U10"
@@ -8204,7 +8204,7 @@
 	(footprint "Package_TO_SOT_SMD:SOT-23-6"
 		(layer "F.Cu")
 		(uuid "5704d57c-da74-45de-a6e2-49e1d22ac377")
-		(at 152.1375 104.999999 180)
+		(at 152.1375 105 180)
 		(descr "SOT, 6 Pin (https://www.jedec.org/sites/default/files/docs/Mo-178c.PDF variant AB), generated with kicad-footprint-generator ipc_gullwing_generator.py")
 		(tags "SOT TO_SOT_SMD")
 		(property "Reference" "U9"
@@ -17271,7 +17271,7 @@
 		(path "/63601032-b9b7-4ad2-958d-931c807df8af")
 		(sheetname "Root")
 		(sheetfile "project.kicad_sch")
-		(attr through_hole dnp)
+		(attr through_hole exclude_from_pos_files exclude_from_bom dnp)
 		(fp_line
 			(start -1.8 4.35)
 			(end 1.8 4.35)
@@ -22056,7 +22056,7 @@
 	(footprint "Package_TO_SOT_SMD:SOT-23-6"
 		(layer "F.Cu")
 		(uuid "f439f147-aaaf-4587-b729-465fa7e07d06")
-		(at 151.8625 84.999999 180)
+		(at 151.8625 85 180)
 		(descr "SOT, 6 Pin (https://www.jedec.org/sites/default/files/docs/Mo-178c.PDF variant AB), generated with kicad-footprint-generator ipc_gullwing_generator.py")
 		(tags "SOT TO_SOT_SMD")
 		(property "Reference" "U8"
