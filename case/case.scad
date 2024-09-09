@@ -194,7 +194,7 @@ cube([w, h, d+e]);
 
 module led_group_hub()
 {
-	translate([6,0,0])
+	translate([6,hole_dist_y,0])
 	children();
 }
 
