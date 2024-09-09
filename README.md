@@ -1,5 +1,7 @@
 # An USB 2 Hub with per-port-power and MTT
 
+![Image of a USB 2 Hub](./img/hub_and_case.jpg)
+
 This repository contains the [KiCad](https://www.kicad.org/) and [OpenScad](https://openscad.org/) files for an USB 2 Hub with per-port power and MTT.
 
 The PCB design contains 4 USB-A ports and 1 USB-C port. The latter is used to connect the device to a computer.
