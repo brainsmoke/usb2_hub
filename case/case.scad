@@ -84,7 +84,7 @@ module on_pcb()
 
 module at_front()
 {
-	translate([-pcb_radius,hole_dist_y/2,0]) rotate([0,0,90])  children();
+	translate([hole_dist_x+pcb_radius,hole_dist_y/2,0]) rotate([0,0,-90])  children();
 }
 
 module at_top()
@@ -99,7 +99,7 @@ module usb_a_locations()
 
 module led_group_locations()
 {
-	for (dy=[-30,-10,10,30] ) translate([hole_dist_x, hole_dist_y/2+dy, 0]) children();
+	for (dy=[-30,-10,10,30] ) translate([0, hole_dist_y/2+dy, 0]) children();
 }
 
 module led_locations()
@@ -194,7 +194,7 @@ cube([w, h, d+e]);
 
 module led_group_hub()
 {
-	translate([hole_dist_x-6,0,0])
+	translate([6,0,0])
 	children();
 }
 
@@ -250,7 +250,7 @@ module flip()
 
 module next()
 {
-	translate([hole_dist_x+2*outer_radius+padding,0 , 0]) children();
+	translate([-hole_dist_x-2*outer_radius-padding,0 , 0]) children();
 }
 
 preview()
