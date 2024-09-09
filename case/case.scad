@@ -104,7 +104,7 @@ module led_group_locations()
 
 module led_locations()
 {
-	led_group_locations() for (dy=[-2.1,0,2.1]) translate([0, dy, 0]) children();
+	led_group_locations() for (dy=[-led_pitch,0,led_pitch]) translate([0, dy, 0]) children();
 }
 
 module at_holes(x, y)
@@ -182,14 +182,28 @@ module light_pipe()
 cube([lightpipe_width, lightpipe_height, (wall_height+bottom_thickness+top_thickness+e)*2], center=true);
 }
 
-module light_pipe_guide()
+module light_pipe_guide(n_leds)
 {
 	w = lightpipe_width+lightpipe_guide_border*2;
-	h = led_pitch*2+lightpipe_height+lightpipe_guide_border*2;
+	h = led_pitch*(n_leds-1)+lightpipe_height+lightpipe_guide_border*2;
 	d = lightpipe_guide_thickness;
 	z = wall_height+bottom_thickness-lightpipe_guide_thickness;
 	translate([-w/2,-h/2,z]) 
 cube([w, h, d+e]);
+}
+
+module led_group_hub()
+{
+	translate([hole_dist_x-6,0,0])
+	children();
+}
+
+module leds_hub()
+{
+	led_group_hub()
+	for (dy=[-led_pitch/2,led_pitch/2])
+	translate([0, dy, 0])
+	children();
 }
 
 module top()
@@ -212,7 +226,8 @@ module top()
 			}
 		}
 			on_pcb() translate([0,0,screw_tension_gap]) at_holes() leg(wall_height-pcb_thickness-leg_height+e);
-			led_group_locations() light_pipe_guide();
+			led_group_locations() light_pipe_guide(3);
+			led_group_hub() light_pipe_guide(3);
 		}
 
 		union()
@@ -223,6 +238,7 @@ module top()
 			usb_a_locations() usb_a_keepout();
 		}
 		led_locations() light_pipe();
+		leds_hub() light_pipe();
 		}
 	}
 }
