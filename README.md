@@ -1,4 +1,4 @@
-# An USB 2 Hub with per-port-power and MTT
+# A USB 2 Hub with per-port-power and MTT
 
 ![Image of a USB 2 Hub](./img/hub_and_case.jpg)
 
