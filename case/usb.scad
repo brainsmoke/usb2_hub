@@ -4,6 +4,7 @@ $fn=48;
 usb_c_depth = 7.35;
 usb_c_width = 8.45;
 usb_c_height = 2.56;
+usb_c_z = .25;
 usb_c_edge_radius = .93;
 usb_c_front_from_origin = 6.77-3.13;
 usb_c_plug_end = 1.77-3.13;
@@ -21,8 +22,14 @@ usb_a_depth = 10;
 usb_a_width = 13.2;
 usb_a_height = 5.7;
 usb_a_edge_radius = .5;
-usb_a_z = .6;
+usb_a_z = 1.;
 usb_a_overlap = .65;
+usb_a_plastic_depth = 4.5;
+usb_a_plastic_width = 14.5;
+usb_a_plastic_height = 4;
+usb_a_plastic_z = usb_a_z + 1.;
+
+
 
 usb_a_plug_depth = 12.5;
 usb_a_plug_width = 12.1;
@@ -86,15 +93,16 @@ linear_extrude(usb_c_plug_shroud_depth+2*margin+e) rounded_rect(usb_c_plug_shrou
 
 module usb_c_type_c31_m12(margin=0)
 {
-
-	color([.9,.9,.9])
+	translate([0,0,usb_c_z])
 	{
+		color([.9,.9,.9])
+			translate([-usb_c_width/2-margin,usb_c_front_from_origin+margin,-margin ])
+				rotate([90,0,0])
+					linear_extrude(usb_c_depth+2*margin) rounded_rect(usb_c_width+2*margin, usb_c_height+2*margin, usb_c_edge_radius+margin);
 
-translate([-usb_c_width/2-margin,usb_c_front_from_origin+margin,-margin ])
-rotate([90,0,0])
-linear_extrude(usb_c_depth+2*margin) rounded_rect(usb_c_width+2*margin, usb_c_height+2*margin, usb_c_edge_radius+margin);
+		translate([0,usb_c_plug_end,usb_c_height/2])
+			children();
 	}
-	translate([0,usb_c_plug_end,usb_c_height/2]) children();
 }
 
 
@@ -102,10 +110,15 @@ module usb_a_shou_han(margin=0)
 {
 	color([.9,.9,.9])
 	{
-
 translate([-usb_a_width/2-margin,usb_a_overlap+margin,usb_a_z -margin ])
 rotate([90,0,0])
 linear_extrude(usb_a_depth+2*margin) rounded_rect(usb_a_width+2*margin, usb_a_height+2*margin, usb_a_edge_radius+margin);
+	}
+	color([.1,.1,.1])
+	{
+translate([-usb_a_plastic_width/2-margin,usb_a_overlap+margin-usb_a_depth+usb_a_plastic_depth+e,usb_a_plastic_z -margin ])
+rotate([90,0,0])
+cube([usb_a_plastic_width+2*margin, usb_a_plastic_height+2*margin, usb_a_plastic_depth+2*margin]);
 	}
 	translate([0,usb_a_plug_end/*+8.65*/,usb_a_height/2+usb_a_z]) children();
 

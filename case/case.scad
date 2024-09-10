@@ -18,23 +18,28 @@ top_thickness = .8;
 top_edge_height = 2.5;
 top_edge_width = 1.;
 top_edge_margin = 0.;
-top_grid_height = 1;
+top_grid_height = 2;
 grid_width=1;
 leg_height = .6;
 leg_radius = 2.7;
 usb_c_board_offset = 3; // based on kicad position
 screw_tension_gap = 0;
 
-lightpipe_width = 2.1;
-lightpipe_height = 1.5;
+
+lightpipe_width = 2.5;
+lightpipe_height = 1.6;
+lightpipe_bar_width = 2.2;
 lightpipe_guide_thickness = 2;
 lightpipe_guide_border = 1;
 
-led_pitch = 2.2;
+led_pitch = 2.1;
 led_x = hole_dist_x;
 
+led_clearance = 1.8;
 outer_radius = inner_radius+wall_thickness;
 screw_fit_radius = (thread*0.9)/2;
+total_height = bottom_thickness+wall_height+top_thickness;
+component_z = bottom_thickness+leg_height+pcb_thickness;
 
 module notched_block(height, radius, notch_size)
 {
@@ -74,12 +79,12 @@ module usb_a_keepout()
 
 module usb_c_keepout()
 {
-	usb_c(margin=.25);
+	usb_c(margin=.5);
 }
 
 module on_pcb()
 {
-	translate([0,0,bottom_thickness+leg_height+pcb_thickness]) children();
+	translate([0,0,component_z]) children();
 }
 
 module at_front()
@@ -97,14 +102,9 @@ module usb_a_locations()
 	at_front() for (x=[-30,-10,10,30] ) translate([x, 0, 0]) children();
 }
 
-module led_group_locations()
-{
-	for (dy=[-30,-10,10,30] ) translate([0, hole_dist_y/2+dy, 0]) children();
-}
-
 module led_locations()
 {
-	led_group_locations() for (dy=[-led_pitch,0,led_pitch]) translate([0, dy, 0]) children();
+	for (dy=[-30,-10,10,30] ) translate([0, hole_dist_y/2+dy, 0]) children();
 }
 
 module at_holes(x, y)
@@ -128,17 +128,17 @@ module leg(h)
 
 module pcb()
 {
-translate([0,0,bottom_thickness+leg_height])
-color("green")	
-rounded_block(pcb_thickness, pcb_radius);
+	translate([0,0,bottom_thickness+leg_height])
+		color("green")
+			rounded_block(pcb_thickness, pcb_radius);
 }
 
 module h_grid(n, pitch, depth, w, h)
 {
 	translate([-w/2,-depth/2, 0])
-	for (i=[0:n-1])
-		translate([(i-(n-1)/2)*pitch,0,0])
-			cube([w, depth, h]);
+		for (i=[0:n-1])
+			translate([(i-(n-1)/2)*pitch,0,0])
+				cube([w, depth, h]);
 }
 
 module grid(w, h, n_rows, row_pitch, n_cols, col_pitch, bar_w, bar_h)
@@ -177,9 +177,25 @@ module case()
 	translate([0,0,bottom_thickness-e]) grid(hole_dist_x+(outer_radius-e)*2, hole_dist_y+(outer_radius-e)*2, 4, 10, 7, 10, grid_width, leg_height+e);
 }
 
-module light_pipe()
+module light_pipe(n_leds)
 {
-cube([lightpipe_width, lightpipe_height, (wall_height+bottom_thickness+top_thickness+e)*2], center=true);
+	for (i=[0:n_leds-1])
+	{
+		dy = (i-(n_leds-1)/2)*led_pitch;
+		w = lightpipe_width;
+		h = lightpipe_height;
+		z = total_height-top_thickness;
+		translate([-w/2, -h/2+dy, z-e]) 
+			cube( [w,h,top_thickness+e*2] );
+	}
+	w = lightpipe_bar_width;
+	h = led_pitch*(n_leds-1)+lightpipe_height+lightpipe_guide_border*2;
+	z = component_z + led_clearance;
+    d = total_height-top_thickness-z;
+
+	translate([-w/2,-h/2-e,z-e]) 
+		cube([w, h+2*e, d+e]);
+
 }
 
 module light_pipe_guide(n_leds)
@@ -189,22 +205,15 @@ module light_pipe_guide(n_leds)
 	d = lightpipe_guide_thickness;
 	z = wall_height+bottom_thickness-lightpipe_guide_thickness;
 	translate([-w/2,-h/2,z]) 
-cube([w, h, d+e]);
-}
-
-module led_group_hub()
-{
-	translate([6,hole_dist_y,0])
-	children();
+		cube([w, h, d+e]);
 }
 
 module leds_hub()
 {
-	led_group_hub()
-	for (dy=[-led_pitch/2,led_pitch/2])
-	translate([0, dy, 0])
-	children();
+	translate([6,hole_dist_y,0])
+		children();
 }
+
 
 module top()
 {
@@ -214,7 +223,7 @@ module top()
 		{
 		translate([0,0,bottom_thickness+wall_height])
 		{
-			translate([0,0,-.8]) grid(hole_dist_x+(inner_radius+e)*2, hole_dist_y+(inner_radius+e)*2, 4, 10, 7, 10, grid_width, top_grid_height+e);
+			translate([0,0,-top_grid_height]) grid(hole_dist_x+(inner_radius+e)*2, hole_dist_y+(inner_radius+e)*2, 4, 10, 7, 10, grid_width, top_grid_height+e);
 
 			rounded_block(top_thickness, outer_radius);
 			difference()
@@ -226,8 +235,8 @@ module top()
 			}
 		}
 			on_pcb() translate([0,0,screw_tension_gap]) at_holes() leg(wall_height-pcb_thickness-leg_height+e);
-			led_group_locations() light_pipe_guide(3);
-			led_group_hub() light_pipe_guide(3);
+			led_locations() light_pipe_guide(3);
+			leds_hub() light_pipe_guide(2);
 		}
 
 		union()
@@ -237,8 +246,8 @@ module top()
 			at_top() usb_c_keepout();
 			usb_a_locations() usb_a_keepout();
 		}
-		led_locations() light_pipe();
-		leds_hub() light_pipe();
+		led_locations() light_pipe(3);
+		leds_hub() light_pipe(2);
 		}
 	}
 }
