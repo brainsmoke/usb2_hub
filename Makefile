@@ -26,8 +26,6 @@ GERBER_OPTS=--no-protel-ext --board-plot-params
 DRILL_OPTS=--format=excellon --excellon-oval-format=route --excellon-separate-th
 BOM_JLC_OPTS=--fields='Value,Reference,Footprint,LCSC' --labels='Comment,Designator,Footprint,JLCPCB Part \#' --group-by=LCSC --ref-range-delimiter=''
 
-
-
 SCAD_DEPS=case/case.scad case/usb.scad
 CASE=$(BUILDDIR)/case_bottom.stl \
      $(BUILDDIR)/case_top.stl
@@ -79,7 +77,6 @@ $(BUILDDIR)/case_nolightpipes_top.stl: case/case_nolightpipes.scad
 
 $(BUILDDIR)/%.stl: case/%.scad $(SCAD_DEPS)
 	openscad -o $@ $<
-
 
 clean:
 	-rm $(TARGETS) $(TMPFILES) $(EXTRA)
