@@ -28,7 +28,8 @@ BOM_JLC_OPTS=--fields='Value,Reference,Footprint,LCSC' --labels='Comment,Designa
 
 SCAD_DEPS=case/case.scad case/usb.scad
 CASE=$(BUILDDIR)/case_bottom.stl \
-     $(BUILDDIR)/case_top.stl
+     $(BUILDDIR)/case_top.stl \
+     $(BUILDDIR)/lightpipe.stl
 
 CASE_EXTRA=$(BUILDDIR)/case_v0.1_bottom.stl \
            $(BUILDDIR)/case_v0.1_top.stl \

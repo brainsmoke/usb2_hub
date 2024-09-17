@@ -177,7 +177,7 @@ module case()
 	translate([0,0,bottom_thickness-e]) grid(hole_dist_x+(outer_radius-e)*2, hole_dist_y+(outer_radius-e)*2, 4, 10, 7, 10, grid_width, leg_height+e);
 }
 
-module light_pipe(n_leds)
+module light_pipe_keepout(n_leds)
 {
 	for (i=[0:n_leds-1])
 	{
@@ -196,6 +196,31 @@ module light_pipe(n_leds)
 	translate([-w/2,-h/2-e,z-e]) 
 		cube([w, h+2*e, d+e]);
 
+}
+
+module light_pipe(n_leds)
+{
+color("#f0f0f0")
+{
+
+	for (i=[0:n_leds-1])
+	{
+		dy = (i-(n_leds-1)/2)*led_pitch;
+		w = lightpipe_bar_width*.8;
+		h = lightpipe_height*.8;
+		z = component_z + led_clearance;
+		translate([-w/2, -h/2+dy, z-e]) 
+			cube( [w,h,total_height-z] );
+	}
+	w = .4;
+	h = led_pitch*(n_leds-1)+lightpipe_height+lightpipe_guide_border*2;
+    d = 1.9;
+	z = total_height-top_thickness-d;
+
+	translate([-lightpipe_bar_width*.8/2,-h/2-e,z-e]) 
+		cube([w, h+2*e, d+e]);
+
+}
 }
 
 module light_pipe_guide(n_leds)
@@ -246,8 +271,8 @@ module top()
 			at_top() usb_c_keepout();
 			usb_a_locations() usb_a_keepout();
 		}
-		led_locations() light_pipe(3);
-		leds_hub() light_pipe(2);
+		led_locations() light_pipe_keepout(3);
+		leds_hub() light_pipe_keepout(2);
 		}
 	}
 }
@@ -269,6 +294,12 @@ preview()
 	{
 		at_top() usb_c();
 		usb_a_locations() usb_a();
+	}
+	flip()
+	next()
+	{
+		led_locations() light_pipe(3);
+		leds_hub() light_pipe(2);
 	}
 }
 
