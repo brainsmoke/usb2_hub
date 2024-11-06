@@ -8983,7 +8983,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
-		(on_board no)
+		(on_board yes)
 		(dnp yes)
 		(uuid "63601032-b9b7-4ad2-958d-931c807df8af")
 		(property "Reference" "J6"
@@ -9002,7 +9002,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
+		(property "Footprint" "Library:PinHeader_1x02_P2.54mm_Vertical"
 			(at 90.17 125.73 0)
 			(effects
 				(font
@@ -11046,7 +11046,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-12"
+		(property "Footprint" "Library:USB_C_Receptacle_HRO_TYPE-C-31-M-12"
 			(at 33.02 39.37 0)
 			(effects
 				(font
