@@ -1,4 +1,4 @@
-# case for the PCBs marked v0.1
+// case for the PCBs marked v0.1
 
 include <case_nolightpipes.scad>
 

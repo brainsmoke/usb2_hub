@@ -4,6 +4,8 @@
 import csv, sys, decimal
 from math import cos, sin, radians
 
+boardhouse = sys.argv[1]
+
 r = csv.DictReader(sys.stdin)
 
 in_cols = [ 'Ref','Val','Package','PosX','PosY','Rot','Side' ]
@@ -16,9 +18,13 @@ corrections = {
 
     'jlc': {
 
+		'AP2112K-3.3'  : { 'pos': ('0','0'), 'rot': '-90' },
         'AP22652AW6-7' : { 'pos': ('0','0'), 'rot': '-90' },
         'USBLC6-2SC6'  : { 'pos': ('0','0'), 'rot': '-90' },
         'FE1.1'        : { 'pos': ('0','0'), 'rot': '-90' },
+		'STM32F042G6Ux': { 'pos': ('0','0'), 'rot': '-90' },
+        'USB_C_Receptacle_USB2.0'
+                       : { 'pos': ('0','1.45'), 'rot': '0' },
         'USB_C_Receptacle_USB2.0_16P'
                        : { 'pos': ('0','1.45'), 'rot': '0' },
     }
@@ -42,5 +48,5 @@ def process(row, boardhouse='jlc'):
 
 for row in r:
     new_row = { y:row[x] for x,y in zip(in_cols, out_cols) }
-    out.writerow( process(new_row) ) 
+    out.writerow( process(new_row, boardhouse) ) 
 
