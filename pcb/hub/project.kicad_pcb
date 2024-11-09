@@ -25007,6 +25007,18 @@
 		(layer "Edge.Cuts")
 		(uuid "eeff053e-a506-40b0-a89e-3a0b0b74cc6c")
 	)
+	(gr_text "${PCB_ORDER_NUMBER}"
+		(at 139 135 0)
+		(layer "B.SilkS")
+		(uuid "2767b74a-fbcc-4e6e-b433-747ec4374a54")
+		(effects
+			(font
+				(size 0.9 0.9)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
 	(gr_text "Open Hardware\nCC-BY-4.0"
 		(at 146.5 95 270)
 		(layer "B.SilkS")
