@@ -19,7 +19,7 @@ LAYERS4=$(LAYERS2) In1.Cu In2.Cu
 LAYERS :=$(LAYERS4)
 
 SCAD_DIR=case
-SCAD_DEPS=case/usb.scad case/case_v0.1.scad case/case_nolightpipes.scad
+SCAD_DEPS=case/usb.scad case/case_v0.1.scad case/case_nolightpipes.scad case/case.scad
 SCAD_PARAM_DIR=case/parameters
 SCAD_PARAM_SET=default
 SCAD_PARTS=case case_top case_bottom case_v0.1_bottom case_v0.1_top case_nolightpipes_top 
