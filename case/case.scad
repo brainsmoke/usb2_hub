@@ -38,12 +38,12 @@ lightpipe_diameter = 2.2;
 led_pitch = 2.3; // 2.1 in reality, give the slicer a bit more space
 led_x = hole_dist_x;
 
-led_clearance = 1.8;
+led_clearance = 1.;
 outer_radius = inner_radius+wall_thickness;
 screw_fit_radius = (thread*0.9)/2;
 
 screw_loose_radius = (thread*1.1)/2;
-screw_loose_radius_bottom = (thread*1.5)/2;
+screw_loose_radius_bottom = (thread*2)/2;
 total_height = bottom_thickness+wall_height+top_thickness;
 component_z = bottom_thickness+leg_height+pcb_thickness;
 
@@ -187,7 +187,10 @@ module case()
 		union()
 		{
 			at_holes() translate([0,0,-e])
-		cylinder(h=leg_height+bottom_thickness+e*2, r2=screw_loose_radius, r1=screw_loose_radius_bottom);
+			{
+		cylinder(h=leg_height+bottom_thickness+e-0.4, r2=screw_loose_radius, r1=screw_loose_radius_bottom);
+		cylinder(h=leg_height+bottom_thickness+e*2, r=screw_loose_radius);
+			}
 
 			on_pcb()
 			{
