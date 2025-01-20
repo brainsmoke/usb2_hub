@@ -1830,7 +1830,7 @@
 		(descr "SOT, 6 Pin (JEDEC MO-178 Var AB https://www.jedec.org/document_search?search_api_views_fulltext=MO-178), generated with kicad-footprint-generator ipc_gullwing_generator.py")
 		(tags "SOT TO_SOT_SMD")
 		(property "Reference" "U10"
-			(at 0 -2.4 180)
+			(at 0 -2.6 180)
 			(layer "F.SilkS")
 			(uuid "ec05dcdd-38fe-44c2-9498-51f339944aaf")
 			(effects
