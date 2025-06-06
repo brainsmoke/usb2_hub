@@ -10,18 +10,25 @@ If you want to switch power to ports you can use the provided [kernel interface]
 
 ## Case
 
-OpenSCAD and STL files are available. These can be used to 3D print a case for the hub. The case can be assembled using M3 bolts with a maximum length of 10 mm.
+OpenSCAD and STL files are available. These can be used to 3D print a case for the hub. The case can be assembled using countersunk M3 bolts with a maximum length of 8 mm.
 
-## Revisions
+* [Bottom](./build/hub/case_bottom.stl)
+* [Top](./build/hub/case_bottom.stl)
 
-### v0.1 minimally tested
+## Revision errata:
+
+### v0.7
+
+* No known errata
+
+### v0.4
+
+* A capacitor and a USB-A connector are in the same place.
+
+### v0.1
 
 * instead of a 100k (busb <-> gnd) on r11, solder two 100k resistors from each of r11's pads
   to each of r10's pads (busb <-> 5v & gnd <-> vbusm)
 
 <img src="img/hub.jpg">
-
-### v0.6 untested
-
-<img src="img/v0.6.png">
 
