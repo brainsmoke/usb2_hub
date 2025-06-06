@@ -13,7 +13,7 @@ If you want to switch power to ports you can use the provided [kernel interface]
 OpenSCAD and STL files are available. These can be used to 3D print a case for the hub. The case can be assembled using countersunk M3 bolts with a maximum length of 8 mm.
 
 * [Bottom](./build/hub/case_bottom.stl)
-* [Top](./build/hub/case_bottom.stl)
+* [Top](./build/hub/case_top.stl)
 
 ## Revision errata:
 
