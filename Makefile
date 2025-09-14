@@ -1,6 +1,7 @@
 
 PROJECTS=hub
 
+BASENAME=project
 BOARDHOUSE=jlc
 PARTNO_MARKING=JLCJLCJLCJLC
 BOM_JLC_OPTS=--fields='Value,Reference,Footprint,LCSC' --labels='Comment,Designator,Footprint,JLCPCB Part \#' --group-by=LCSC --ref-range-delimiter='' --exclude-dnp
@@ -22,7 +23,7 @@ SCAD_DIR=case
 SCAD_DEPS=case/usb.scad case/case_v0.1.scad case/case_nolightpipes.scad case/case.scad
 SCAD_PARAM_DIR=case/parameters
 SCAD_PARAM_SET=default
-SCAD_PARTS=case case_top case_bottom case_v0.1_bottom case_v0.1_top case_nolightpipes_top 
+SCAD_PARTS=hub/case hub/case_top hub/case_bottom hub/case_v0.1_bottom hub/case_v0.1_top hub/case_nolightpipes_top 
 
 SCAD_DEFINES=
 

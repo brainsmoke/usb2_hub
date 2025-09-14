@@ -1,10 +1,11 @@
+MAKEFLAGS += --no-builtin-rules
 
 BUILDDIR=build/%
 TMPDIR=tmp/%
-PCB=pcb/%/project.kicad_pcb
-SCHEMATIC=pcb/%/project.kicad_sch
+PCB=pcb/%/$(BASENAME).kicad_pcb
+SCHEMATIC=pcb/%/$(BASENAME).kicad_sch
 ifeq ($(REQUIRE_DRC), y)
-DRC_REPORT=pcb/%/project.drc
+DRC_REPORT=pcb/%/$(BASENAME).drc
 else
 DRC_REPORT=
 endif
@@ -12,32 +13,34 @@ POSFILE_KICAD=$(TMPDIR)/posfile_top_kicad.csv
 POSFILE=$(BUILDDIR)/posfile_$(BOARDHOUSE).csv
 ZIPFILE=$(BUILDDIR)/gerbers_$(BOARDHOUSE).zip
 BOMFILE=$(BUILDDIR)/bomfile_$(BOARDHOUSE).csv
-DRILLFILES=$(TMPDIR)/project-NPTH.drl $(TMPDIR)/project-PTH.drl
+DRILLFILES=$(TMPDIR)/$(BASENAME)-NPTH.drl $(TMPDIR)/$(BASENAME)-PTH.drl
 
 COMMA :=,
 SPACE :=$() $()
 GERBER_EXPORT_LIST=$(subst $(SPACE),$(COMMA),$(value LAYERS))
 
-GERBERS := $(foreach layer, $(subst .,_, $(LAYERS)), $(TMPDIR)/project-$(layer).gbr)
+GERBERS := $(foreach layer, $(subst .,_, $(LAYERS)), $(TMPDIR)/$(BASENAME)-$(layer).gbr)
 
 TMPFILES=$(GERBERS) $(DRILLFILES) $(POSFILE_KICAD)
 
 PROJECT_TARGETS=$(PROJECTS:=.project)
-TARGETS=$(PROJECT_TARGETS)
+PCBA_TARGETS=$(PCBA:=.pcba)
+
+TARGETS=$(PROJECT_TARGETS) $(PCBA_TARGETS)
 
 INTERMEDIATE_FILES=$(foreach project, $(PROJECTS), \
             $(patsubst %, $(POSFILE_KICAD), $(project)) \
             $(foreach gerber, $(GERBERS), $(patsubst %, $(gerber), $(project))) \
             $(foreach drillfile, $(DRILLFILES), $(patsubst %, $(drillfile), $(project))))
 
-STLS=$(foreach part, $(SCAD_PARTS), $(BUILDDIR)/$(part).stl)
+STLS=$(foreach part, $(SCAD_PARTS), $(BUILDDIR:\%=$(part).stl))
 
 BUILD_FILES=$(foreach project, $(PROJECTS), \
             $(patsubst %, $(POSFILE), $(project)) \
             $(patsubst %, $(BOMFILE), $(project)) \
             $(patsubst %, $(ZIPFILE), $(project)) \
-            $(patsubst %, $(DRC_REPORT), $(project)) \
-            $(foreach stl, $(STLS), $(patsubst %, $(stl), $(project))))
+            $(patsubst %, $(DRC_REPORT), $(project))) \
+            $(STLS)
 
 .PHONY: all clean $(PROJECT_TARGETS)
 .SECONDARY:
@@ -45,7 +48,8 @@ BUILD_FILES=$(foreach project, $(PROJECTS), \
 
 all: $(TARGETS)
 
-$(PROJECT_TARGETS): %.project: $(ZIPFILE) $(POSFILE) $(BOMFILE) $(STLS)
+$(PROJECT_TARGETS): %.project: $(ZIPFILE)
+$(PCBA_TARGETS): %.pcba: $(POSFILE) $(BOMFILE)
 
 $(DRC_REPORT): $(PCB)
 	kicad-cli pcb drc $(DRC_OPTS) -o "$@" "$<" || (cat "$@" && false)
@@ -75,13 +79,18 @@ $(ZIPFILE): $(GERBERS) $(DRILLFILES)
 	zip -o - -j $^ > "$@"
 
 define scad_part
-$$(BUILDDIR)/$(1).stl: $$(SCAD_DIR)/$(1).scad $$(SCAD_DEPS) $$(SCAD_PARAM_DIR)/%.json
+$(1).project: $$(BUILDDIR:\%=$(2).stl)
+
+$$(BUILDDIR:\%=$(2).stl): $$(SCAD_DIR)/$(patsubst $(1)/%,%.scad,$(2)) $$(SCAD_DEPS) $$(SCAD_PARAM_DIR)/$(1).json
 	mkdir -p "$$(dir $$@)"
-	openscad -o "$$@" $$(SCAD_DEFINES) -p "$$(SCAD_PARAM_DIR)/$$*.json" -P "$$(SCAD_PARAM_SET)" $$<
+	openscad -o "$$@" $$(SCAD_DEFINES) -p "$$(SCAD_PARAM_DIR)/$(1).json" -P "$$(SCAD_PARAM_SET)" $$<
 
 endef
 
-$(foreach part, $(SCAD_PARTS), $(eval $(call scad_part,$(part))))
+$(foreach project, $(PROJECTS), \
+$(foreach part, $(filter $(project)/%, $(SCAD_PARTS)), \
+$(eval $(call scad_part,$(project),$(part))) \
+))
 
 clean:
 	-rm $(INTERMEDIATE_FILES) $(BUILD_FILES)
