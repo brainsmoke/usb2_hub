@@ -1,5 +1,6 @@
 
 PROJECTS=hub
+PCBA=hub
 
 BASENAME=project
 BOARDHOUSE=jlc
