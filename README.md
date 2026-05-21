@@ -1,5 +1,7 @@
 # A USB 2 Hub with per-port-power and MTT
 
+Production files (JLCPCB): [gerbers](build/hub/gerbers_jlc.zip) [BOM](build/hub/bomfile_jlc.csv) [POS](build/hub/posfile_jlc.csv)
+
 ![Image of a USB 2 Hub](./img/hub_and_case.jpg)
 
 This repository contains the [KiCad](https://www.kicad.org/) and [OpenScad](https://openscad.org/) files for a USB 2 Hub with per-port power and MTT.
